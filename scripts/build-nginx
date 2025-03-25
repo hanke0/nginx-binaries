@@ -65,6 +65,7 @@ configure() {
 		--without-http_scgi_module \
 		--without-http_grpc_module \
 		--without-http_memcached_module \
+		--with-stream \
 		"$@"
 
 	# Don't load openssl.cnf unless the OPENSSL_CONF env. variable is
