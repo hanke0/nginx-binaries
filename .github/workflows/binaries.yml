@@ -133,7 +133,6 @@ jobs:
     strategy:
       matrix:
         NGINX_VERSION:
-          - 1.25.x
           - 1.26.x
           - 1.28.x
         ARCH:
