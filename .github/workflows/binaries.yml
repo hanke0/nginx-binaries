@@ -189,14 +189,10 @@ jobs:
     strategy:
       matrix:
         NGINX_VERSION:
-          - 1.24.x
-          - 1.25.x
           - 1.26.x
+          - 1.28.x
         include:
           - NJS_VERSION: 0.x.x
-          # Pin older njs version for old nginx.
-          - NGINX_VERSION: 1.24.x
-            NJS_VERSION: 0.8.x
     steps:
       - name: Install dependencies
         run: brew install gsed jansson jq openssl@3 pcre zlib
@@ -240,9 +236,8 @@ jobs:
     strategy:
       matrix:
         NGINX_VERSION:
-          - 1.24.x
-          - 1.25.x
           - 1.26.x
+          - 1.28.x
     steps:
       - name: Setup MSYS2 and install packages
         uses: msys2/setup-msys2@v2
